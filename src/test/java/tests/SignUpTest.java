@@ -46,22 +46,4 @@ public class SignUpTest {
 
         driver.quit();
     }
-
-    @Test
-    public void checkSigUpFormWithValidData1() {
-
-        WebDriver driver = new ChromeDriver();
-
-        driver.findElement(By.name("")).sendKeys("");
-        driver.findElement(By.name("")).sendKeys("");
-        driver.findElement(By.name("")).sendKeys("");
-        driver.findElement(By.name("")).sendKeys("");
-        driver.findElement(By.name("")).sendKeys("");
-        driver.findElement(By.name("")).sendKeys("");
-        driver.findElement(By.xpath("")).click();
-
-        assertEquals("", "");
-
-        driver.quit();
-    }
 }
