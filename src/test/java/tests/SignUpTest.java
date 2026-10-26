@@ -46,4 +46,10 @@ public class SignUpTest {
 
         driver.quit();
     }
+
+    @Test
+    public void test() {
+
+        assertTrue(true);
+    }
 }
