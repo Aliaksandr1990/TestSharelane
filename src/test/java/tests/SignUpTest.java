@@ -4,19 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class SignUpTest {
 
-
-
-    //4 Убедиться что отображается title SignUp
-
     @Test
-    public void checkZipCodeInputWithValidData() throws InterruptedException {
+    public void checkZipCodeInputWithValidData() {
 
         WebDriver driver = new ChromeDriver();
 
@@ -46,10 +42,26 @@ public class SignUpTest {
         driver.findElement(By.name("")).sendKeys("");
         driver.findElement(By.xpath("")).click();
 
-        assertEquals("" , "");
+        assertEquals("", "");
 
         driver.quit();
     }
 
+    @Test
+    public void checkSigUpFormWithValidData1() {
 
+        WebDriver driver = new ChromeDriver();
+
+        driver.findElement(By.name("")).sendKeys("");
+        driver.findElement(By.name("")).sendKeys("");
+        driver.findElement(By.name("")).sendKeys("");
+        driver.findElement(By.name("")).sendKeys("");
+        driver.findElement(By.name("")).sendKeys("");
+        driver.findElement(By.name("")).sendKeys("");
+        driver.findElement(By.xpath("")).click();
+
+        assertEquals("", "");
+
+        driver.quit();
+    }
 }
